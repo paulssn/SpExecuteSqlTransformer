@@ -69,6 +69,12 @@ I was looking for a way to automate this task, and as I couldn't find anything s
 * If the formatting fails the transformed string starts with `-- [SQL_FORMATTING_ERROR]`
 * Per default, details are found in the directory where the application lives in `logs/log.txt`
 
+## Aren't there easier ways to implement this? ##
+
+Yes, of course there are!
+
+Certainly this could be implemented without re-inventing and implementing part of a pseudo SQL-parser (and re-using existing libraries or code instead), but at the time I wrote this tool, I also wanted to play around with lexer/parser logic and learn something ;)
+
 ## Platforms ##
 
 SpExecuteSqlTransformer currently runs on Windows only.

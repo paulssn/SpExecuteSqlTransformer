@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>SpExecuteSqlTransformer.Runner</RootNamespace>
     <AssemblyName>SpExecuteSqlTransformer.Runner</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -93,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpExecuteSqlTransformer.Core\SpExecuteSqlTransformer.Core.csproj">
-      <Project>{556308ad-2126-43b8-baa6-76fd59ef9c0e}</Project>
+      <Project>{335fb148-e6d0-49ba-a3dd-453e5c075d94}</Project>
       <Name>SpExecuteSqlTransformer.Core</Name>
     </ProjectReference>
   </ItemGroup>

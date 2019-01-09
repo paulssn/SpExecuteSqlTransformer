@@ -1,0 +1,23 @@
+version: '1.0.{build}'
+image: Visual Studio 2017
+branches:
+  only:
+  - master
+init:
+  # nothing to do
+install:
+  # nothing to do
+before_build:
+  - cmd: nuget restore
+build_script:
+  - cmd: msbuild .\SpExecuteSqlTransformer.sln /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+after_build:
+  # nothing to do
+artifacts:
+  # nothing to do
+clone_depth: 1
+test_script:
+  - cmd: nunit3-console SpExecuteSqlTransformer.Test\bin\Debug\SpExecuteSqlTransformer.Test.dll
+on_finish :
+  # nothing to do
+deploy: off

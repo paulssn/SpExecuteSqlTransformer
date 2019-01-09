@@ -2,6 +2,8 @@
 
 A small tool to automatically transform SQL expression starting with `exec sp_executesql` to make working with such queries easier.
 
+[![Build Status AppVeyor](https://ci.appveyor.com/api/projects/status/github/paulssn/SpExecuteSqlTransformer?branch=master&svg=true)](https://ci.appveyor.com/project/paulssn/spexecutesqltransformer/history)
+
 ## What is it doing? ##
 
 It transforms expressions like

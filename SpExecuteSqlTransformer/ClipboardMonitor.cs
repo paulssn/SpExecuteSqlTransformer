@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace SpExecuteSqlTransformer.Runner
+namespace SpExecuteSqlTransformer
 {
     /// <summary>
     /// Basically taken from https://stackoverflow.com/questions/621577/clipboard-event-c-sharp and slightly modified 

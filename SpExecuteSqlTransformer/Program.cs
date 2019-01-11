@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SpExecuteSqlTransformer.Runner.WinForms
+namespace SpExecuteSqlTransformer
 {
     static class Program
     {

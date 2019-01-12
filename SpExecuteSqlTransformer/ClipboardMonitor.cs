@@ -1,4 +1,5 @@
 ﻿using log4net;
+using SpExecuteSqlTransformer.Model;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -11,7 +12,7 @@ namespace SpExecuteSqlTransformer
     /// Basically taken from https://stackoverflow.com/questions/621577/clipboard-event-c-sharp and slightly modified 
     /// </summary>
     [DefaultEvent("ClipboardChanged")]
-    public class ClipboardMonitor : Control
+    public class ClipboardMonitor : Control, IClipboardMonitor
     {
         private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -28,7 +29,7 @@ namespace SpExecuteSqlTransformer
         /// <summary>
         /// Clipboard contents changed.
         /// </summary>
-        public event EventHandler<ClipboardChangedEventArgs> ClipboardChanged;
+        public event EventHandler ClipboardChanged;
 
         protected override void Dispose(bool disposing)
         {
@@ -79,23 +80,12 @@ namespace SpExecuteSqlTransformer
         {
             try
             {
-                IDataObject iData = Clipboard.GetDataObject();
-                ClipboardChanged?.Invoke(this, new ClipboardChangedEventArgs(iData));
+                ClipboardChanged?.Invoke(this, new EventArgs());
             }
             catch (Exception e)
             {
                 log.Error("Unexpected error", e);
             }
-        }
-    }
-
-    public class ClipboardChangedEventArgs : EventArgs
-    {
-        public readonly IDataObject DataObject;
-
-        public ClipboardChangedEventArgs(IDataObject dataObject)
-        {
-            DataObject = dataObject;
         }
     }
 }

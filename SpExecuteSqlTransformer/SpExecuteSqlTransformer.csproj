@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>SpExecuteSqlTransformer.Program</StartupObject>
+    <StartupObject>SpExecuteSqlTransformer.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
@@ -75,17 +75,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppContext.cs" />
     <Compile Include="ClipboardMonitor.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ContextMenu.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -123,6 +122,10 @@
     <ProjectReference Include="..\SpExecuteSqlTransformer.Core\SpExecuteSqlTransformer.Core.csproj">
       <Project>{335fb148-e6d0-49ba-a3dd-453e5c075d94}</Project>
       <Name>SpExecuteSqlTransformer.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpExecuteSqlTransformer.Model\SpExecuteSqlTransformer.Model.csproj">
+      <Project>{0CDFE246-6985-44ED-BCA3-906BEDA95476}</Project>
+      <Name>SpExecuteSqlTransformer.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

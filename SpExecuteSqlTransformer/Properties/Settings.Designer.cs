@@ -22,5 +22,14 @@ namespace SpExecuteSqlTransformer.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Hotkey {
+            get {
+                return ((string)(this["Hotkey"]));
+            }
+        }
     }
 }
